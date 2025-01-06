@@ -1,0 +1,282 @@
+body {
+    font-family: 'Sora', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: #333;
+}
+
+/* Styles pour les titres */
+h1, h2, h3 {
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 3rem; /* Taille du titre principal */
+    font-weight: 700; /* Gras */
+}
+
+h2 {
+    font-size: 2rem; /* Taille des sous-titres */
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.5rem; /* Taille des titres d'activités */
+    font-weight: 600;
+}
+
+/* Section Hero */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Place la vidéo en arrière-plan */
+}
+
+.hero-content {
+    z-index: 1; /* Place le contenu au-dessus de la vidéo */
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Bouton Call-to-Action */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #cb0f12;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #cb0f12; /* Changement de couleur au survol */
+}
+
+/* Section Activités */
+#activities {
+    padding: 2rem;
+    text-align: center;
+}
+
+.activity {
+    margin: 2rem 0;
+}
+
+.activity p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Galerie Photos */
+#gallery {
+    padding: 2rem;
+    text-align: center;
+}
+
+.gallery-images img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Styles pour le tableau des activités */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #cb0f12;
+    color: white;
+    font-weight: 700;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+td {
+    color: #555;
+}
+
+/* Lecteur Audio */
+.audio-player {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.audio-player button {
+    background-color: #cb0f12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.audio-player button:hover {
+    background-color: #cb0f12; /* Changement de couleur au survol */
+}
+
+/* Effet de fondu */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer nav {
+    margin-bottom: 1rem;
+}
+
+footer nav a {
+    margin: 0 10px;
+    color: #cb0f12;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer nav a:hover {
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Styles pour le carrousel */
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+/* Styles pour la balise <hr> */
+hr {
+    border: 0; /* Supprime la bordure par défaut */
+    height: 2px; /* Hauteur de la ligne */
+    background-color: black; /* Couleur de la ligne */
+    margin: 2rem auto; /* Centrage horizontal avec marge en haut et en bas */
+    border-radius: 2px; /* Bords arrondis */
+    width: 85%; /* Largeur de 75% du conteneur */
+}
+
+.hero-background iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    transform: scale(1.2); /* Zoom de 20% */
+    transform-origin: center center; /* Centre le zoom */
+}

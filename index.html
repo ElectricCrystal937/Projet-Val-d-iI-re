@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Val d'Isère Jean Yole</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-background">
+            <iframe 
+                src="https://www.youtube.com/embed/6LuSOGzqWA0?autoplay=1&mute=1&loop=1&playlist=6LuSOGzqWA0" 
+                frameborder="0" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+            </iframe>
+        </div>
+        <div class="hero-content">
+            <h1 class="fade-in">Val d'Isère</h1>
+            <p class="fade-in">Votre destination hivernale préférée</p>
+            <a href="#activities" class="cta-button slide-in">Découvrez nos activités</a>
+        </div>
+    </header>
+
+    <section id="activities">
+        <h2>Découvrez Val d'Isère - Votre Destination Hivernale</h2>
+        <p>Explorez les activités, les paysages et l'esprit de Val d'Isère</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Activité</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Ski et Snowboard</strong></td>
+                    <td>Description des pistes et des écoles de ski.</td>
+                </tr>
+                <tr>
+                    <td><strong>Randonnées</strong></td>
+                    <td>Informations sur les sentiers de randonnée hivernale.</td>
+                </tr>
+                <tr>
+                    <td><strong>Spa et Bien-être</strong></td>
+                    <td>Offres de détente dans les spas locaux.</td>
+                </tr>
+                <tr>
+                    <td><strong>Restaurants et Bars</strong></td>
+                    <td>Guide des meilleurs endroits pour manger et boire.</td>
+                </tr>
+                <tr>
+                    <td><strong>Exemples</strong></td>
+                    <td>Exemples</td>
+                </tr>
+                <tr>
+                    <td><strong>Exemples</strong></td>
+                    <td>Exemples</td>
+                </tr>
+                <tr>
+                    <td><strong>Exemples</strong></td>
+                    <td>Exemples</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+<br>
+<hr>
+<br>
+    <section id="gallery">
+        <h2>Galerie Photos</h2>
+        <br>
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/images/1670549046Val d Isere ski Mont Blanc.jpg" alt="Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="/images/val-disere.webp" alt="Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="/images/valdisere-00018617.webp" alt="Image 3">
+                </div>
+            </div>
+            <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </section>
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-item');
+            if (index >= slides.length) currentSlide = 0;
+            if (index < 0) currentSlide = slides.length - 1;
+
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === currentSlide) slide.classList.add('active');
+            });
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 5000);
+    </script>
+
+    <div class="audio-player">
+        <audio id="background-music" src="musiques/533_full_ski-run_0132_preview.mp3"></audio>
+        <button id="play-button">Play</button>
+    </div>
+
+    <footer>
+        <nav>
+            <a href="#">Accueil</a>
+            <a href="#activities">Activités</a>
+            <a href="#gallery">Galerie</a>
+            <a href="sources.html">Mes Sources</a>
+        </nav>
+        <p>© 2025 Projet Val d'Isère Jean Yole</p>
+        <p>Tout droits réservé par Simon Pasquier</p>
+    </footer>
+
+    <script>
+        const audio = document.getElementById('background-music');
+        const playButton = document.getElementById('play-button');
+
+        playButton.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                playButton.textContent = 'Pause';
+            } else {
+                audio.pause();
+                playButton.textContent = 'Play';
+            }
+        });
+    </script>
+    <script>
+        // Sélectionnez le bouton "Découvrez nos activités"
+        const ctaButton = document.querySelector('.cta-button');
+    
+        // Ajoutez un écouteur d'événements pour le clic
+        ctaButton.addEventListener('click', (event) => {
+            event.preventDefault(); // Empêche le comportement par défaut du lien
+    
+            // Sélectionnez la section des activités
+            const activitiesSection = document.getElementById('activities');
+    
+            // Faites défiler la page jusqu'à la section des activités avec un effet fluide
+            activitiesSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
