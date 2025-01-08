@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+<button id="back-to-top" title="Remonter en haut de la page">
+    <i class="fas fa-arrow-up"></i>
+</button>
+<script>
+document.getElementById('back-to-top').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+<nav class="nav-bar">
+    <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="chiffrecle.html">Chiffre clés</a></li>
+    </ul>
+</nav>
 <body>
     <header class="hero">
         <div class="hero-background">

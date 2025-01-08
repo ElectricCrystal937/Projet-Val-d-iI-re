@@ -7,8 +7,24 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+<button id="back-to-top" title="Remonter en haut de la page">
+    <i class="fas fa-arrow-up"></i>
+</button>
+<script>
+document.getElementById('back-to-top').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+<nav class="nav-bar">
+    <ul>
+        <li><a href="#activities">Activités</a></li>
+        <li><a href="#gallery">Galerie</a></li>
+        <li><a href="sources.html">Mes Sources</a></li>
+        <li><a href="chiffrecle.html">Chiffre clés</a></li>
+    </ul>
+</nav>
 <body>
-    <header class="hero">
+    <header class="hero fade-in">
         <div class="hero-background">
             <iframe 
                 src="https://www.youtube.com/embed/6LuSOGzqWA0?autoplay=1&mute=1&loop=1&playlist=6LuSOGzqWA0" 
@@ -17,6 +33,18 @@
                 allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
             </iframe>
+            <script>
+                const video = document.getElementById('background-video');
+                const heroContent = document.querySelector('.hero-content');
+            
+                video.addEventListener('click', () => {
+                    if (heroContent.style.display !== 'none') {
+                        heroContent.style.display = 'none';
+                    } else {
+                        heroContent.style.display = 'block';
+                    }
+                });
+            </script>
         </div>
         <div class="hero-content">
             <h1 class="fade-in">Val d'Isère</h1>
@@ -25,64 +53,160 @@
         </div>
     </header>
 
-    <section id="activities">
-        <h2>Découvrez Val d'Isère - Votre Destination Hivernale</h2>
-        <p>Explorez les activités, les paysages et l'esprit de Val d'Isère</p>
+    <section id="activities" class="parallax">
+        <h2 class="typography">Découvrez Val d'Isère - Votre Destination Hivernale</h2>
+        <p class="text-move">Explorez les activités, les paysages et l'esprit de Val d'Isère</p>
+        <p class="text-move">Cliquez sur une section pour en savoir plus</p>
         <table>
             <thead>
                 <tr>
                     <th>Activité</th>
-                    <th>Description</th>
+                    <th class="move">Description</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>Ski et Snowboard</strong></td>
-                    <td>Description des pistes et des écoles de ski.</td>
+                    <td><a href="#ski-snowboard" class="transition">Ski et Snowboard</a></td>
+                    <td class="text-move">Description des pistes et des écoles de ski.</td>
                 </tr>
                 <tr>
-                    <td><strong>Randonnées</strong></td>
-                    <td>Informations sur les sentiers de randonnée hivernale.</td>
+                    <td><a href="#hiking" class="transition">Randonnées</a></td>
+                    <td class="move">Informations sur les sentiers de randonnée hivernale.</td>
                 </tr>
                 <tr>
-                    <td><strong>Spa et Bien-être</strong></td>
-                    <td>Offres de détente dans les spas locaux.</td>
+                    <td><a href="#vtt" class="transition">VTT</a></td>
+                    <td class="text-move">Découvrez l'adrénaline en pleine nature : venez rider sur les sentiers exceptionnels de Val d'Isère, le paradis du VTT en montagne !</td>
                 </tr>
                 <tr>
-                    <td><strong>Restaurants et Bars</strong></td>
-                    <td>Guide des meilleurs endroits pour manger et boire.</td>
+                    <td><a href="#national-park" class="transition">Parc national</a></td>
+                    <td class="move">Plongez au cœur de la nature : parcourez les sentiers des parcs nationaux à pied et laissez-vous émerveiller par des paysages à couper le souffle !</td>
                 </tr>
                 <tr>
-                    <td><strong>Exemples</strong></td>
-                    <td>Exemples</td>
+                    <td><a href="#snowpark" class="transition">Snowpark</a></td>
+                    <td class="text-move">Faites le plein de sensations fortes : défiez la gravité dans les snowparks et vivez l’expérience ultime de freestyle en montagne !</td>
                 </tr>
                 <tr>
-                    <td><strong>Exemples</strong></td>
-                    <td>Exemples</td>
+                    <td><a href="#ski-schools" class="transition">Ecoles de skis</a></td>
+                    <td class="move">Apprenez à dompter les pistes : rejoignez une école de ski et découvrez le plaisir de la glisse avec des moniteurs passionnés et expérimentés !</td>
                 </tr>
                 <tr>
-                    <td><strong>Exemples</strong></td>
-                    <td>Exemples</td>
+                    <td><a href="#village" class="transition">Village</a></td>
+                    <td class="move">Val d’Isère, village alpin d’exception, allie charme authentique, domaine skiable de renom et activités toute l’année.</td>
                 </tr>
             </tbody>
         </table>
     </section>
-<br>
-<hr>
-<br>
+    <br>
+    <hr>
+    <br>
+    <section id="ski-snowboard" class="parallax">
+        <h2 class="typography">Ski et Snowboard</h2>
+        <div class="ski-snowboard-content">
+            <img src="https://www.snowskool.com/uploads/images/Snowboarding_and_Skiing%2C_Featured_Image.jpg" alt="Ski et Snowboard à Val d'Isère" class="fade-in">
+            <div class="ski-snowboard-description">
+                <p class="text-move">
+                    Découvrez les pistes de ski et de snowboard de Val d'Isère, réputées pour leur qualité et leur variété. 
+                    Que vous soyez débutant ou expert, nos écoles de ski vous accompagnent pour vivre une expérience inoubliable. 
+                    Profitez des paysages à couper le souffle tout en glissant sur les neiges éternelles.
+                </p>
+            </div>
+        </div>
+    </section>
+    <br>
+    <hr>
+    <br>
+    <section id="hiking" class="parallax">
+        <h2 class="typography">Randonnées</h2>
+        <div class="ski-snowboard-content">
+            <img src="https://www.france-montagnes.com/sites/default/files/styles/header_webzine/public/header/banniere_13.jpg?itok=aN4eTPDs" alt="Randonnées à Val d'Isère" class="fade-in">
+            <div class="hiking-description">
+                <p class="text-move">
+                    Partez à l'aventure et reconnectez-vous avec la nature lors de randonnées inoubliables. Traversez des paysages époustouflants, des forêts mystérieuses aux sommets majestueux, tout en découvrant la faune et la flore locales. Prenez le temps de respirer l'air pur, de vivre chaque instant et de repousser vos limites dans une expérience où chaque pas vous rapproche de la beauté authentique du monde qui vous entoure.
+                </p>
+            </div>
+        </div>
+    </section>
+    <br>
+    <hr>
+    <br>
+    <section id="vtt" class="parallax">
+        <h2 class="typography">VTT</h2>
+        <div class="ski-snowboard-content">
+            <img src="https://www.n-py.com/sites/n-py.com/files/images/nodes/blog-article/image-header/faire-vtt-montagne.webp" alt="VTT à Val d'Isère" class="fade-in">
+            <div class="vtt-description">
+                <p class="text-move">
+                    Enfourchez votre VTT et partez à la conquête des sentiers les plus spectaculaires ! Que vous soyez amateur de descentes techniques, de montées exigeantes ou de balades en pleine nature, chaque parcours offre une aventure unique. Ressentez l’adrénaline dans chaque virage et la liberté dans chaque coup de pédale.
+                </p>
+            </div>
+        </div>
+    </section>
+    <br>
+    <hr>
+    <br>
+    <section id="national-park" class="parallax">
+        <h2 class="typography">Parc national</h2>
+        <div class="ski-snowboard-content">
+            <img src="https://www.france-montagnes.com/sites/default/files/pnpyrenees_francois_lepage_sipa_coeursdenature.jpg" alt="Parc national à Val d'Isère" class="fade-in">
+            <div class="national-park-description">
+                <p class="text-move">
+                    Explorez la grandeur des parcs nationaux, où la nature révèle toute sa splendeur. Entre montagnes imposantes, forêts luxuriantes, lacs paisibles et vallées infinies, chaque pas vous plonge dans un univers d’émerveillement. Que ce soit pour une aventure sportive ou une quête de sérénité, ces territoires vous invitent à vivre une expérience authentique et inoubliable.
+                </p>
+            </div>
+        </div>
+    </section>
+    <br>
+    <hr>
+    <br>
+    <section id="snowpark" class="parallax">
+        <h2 class="typography">Snowpark</h2>
+        <div class="ski-snowboard-content">
+            <img src="https://www.valdisere-snowpark.com/wp-content/uploads/2020/11/DJI_0474-scaled.jpeg" alt="Parc national à Val d'Isère" class="fade-in">
+            <div class="national-park-description">
+                <p class="text-move">
+                    Vivez l'adrénaline en pleine montagne : les snowparks vous attendent pour des sessions de freestyle mémorables ! Modules, kickers, rails et half-pipes, tout est conçu pour libérer votre créativité et repousser vos limites. Que vous soyez débutant ou rider expérimenté, les snowparks offrent un terrain de jeu unique où l'excitation et le plaisir se rencontrent. Sous un ciel azur et au cœur d’un décor enneigé, venez exprimer votre style et partager des moments intenses avec d’autres passionnés. Préparez-vous à rider, à sauter et à vivre des sensations fortes dans un cadre à couper le souffle !                </p>
+            </div>
+        </div>
+    </section>
+    <br>
+    <hr>
+    <br>
+    <section id="ski-schools" class="parallax">
+        <h2 class="typography">Ecoles de skis</h2>
+        <div class="ski-snowboard-content">
+            <img src="https://evolution2.com/media/cache/og_filter/2021/08/1977-kids-ski-val-d-isere-min.jpg" alt="Parc national à Val d'Isère" class="fade-in">
+            <div class="national-park-description">
+                <p class="text-move">
+                    Apprenez à maîtriser les pistes et vivez la magie de la montagne avec nos écoles de ski ! Encadré(e) par des moniteurs passionnés et expérimentés, progressez à votre rythme, que vous soyez débutant ou à la recherche de perfectionnement. Découvrez les joies de la glisse en toute sécurité, tout en explorant des paysages enneigés à couper le souffle. En groupe ou en cours particulier, chaque leçon est une aventure qui allie plaisir, apprentissage et convivialité. Rejoignez-nous et faites de votre séjour à la montagne une expérience inoubliable, où chaque descente devient un moment de fierté et de liberté !            </div>
+        </div>
+    </section>
+    <br>
+    <hr>
+    <br>
+    <section id="village" class="parallax">
+        <h2 class="typography">Village</h2>
+        <div class="ski-snowboard-content">
+            <img src="https://fr.ski-france.com/media/cache/gallery_default/5911485-Val-d'Is%C3%A8re-Village-C.jpg" alt="Parc national à Val d'Isère" class="fade-in">
+            <div class="national-park-description">
+                <p class="text-move">
+                    Val d'Isère, niché au cœur des Alpes, est un charmant village de montagne alliant authenticité et dynamisme. Réputé pour son domaine skiable exceptionnel, ses chalets traditionnels et son ambiance chaleureuse, c'est une destination idéale pour les amateurs de sports d'hiver et de nature. En été comme en hiver, Val d'Isère offre une expérience inoubliable, mêlant paysages grandioses, gastronomie savoyarde et activités variées.        </div>
+    </section>
+    <br>
+    <hr>
+    <br>
     <section id="gallery">
-        <h2>Galerie Photos</h2>
+        <h2 class="typography">Galerie Photos</h2>
         <br>
         <div class="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="/1670549046Val d Isere ski Mont Blanc.jpg d Isere ski Mont Blanc.jpg" alt="Image 1">
+                    <img src="https://cdn.maisonsport.com/static/images/search/resorts/val-disere.webp?w=256&=$undefined" alt="Image 1">
                 </div>
                 <div class="carousel-item">
-                    <img src="/val-disere.webp" alt="Image 2">
+                    <img src="https://www.espaces.ca/var/upload/redactor/1670549046Val%20d%20Isere%20ski%20Mont%20Blanc.jpg" alt="Image 2">
                 </div>
                 <div class="carousel-item">
-                    <img src="/valdisere-00018617.webp" alt="Image 3">
+                    <img src="https://static.apidae-tourisme.com/filestore/objets-touristiques/images/89/251/13957977-diaporama.jpg" alt="Image  ```html
+                    3">
                 </div>
             </div>
             <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
@@ -118,16 +242,10 @@
 
     <div class="audio-player">
         <audio id="background-music" src="musiques/533_full_ski-run_0132_preview.mp3"></audio>
-        <button id="play-button">Play</button>
+        <button id="play-button">Lecture</button>
     </div>
 
     <footer>
-        <nav>
-            <a href="#">Accueil</a>
-            <a href="#activities">Activités</a>
-            <a href="#gallery">Galerie</a>
-            <a href="sources.html">Mes Sources</a>
-        </nav>
         <p>© 2025 Projet Val d'Isère Jean Yole</p>
         <p>Tout droits réservé par Simon Pasquier</p>
     </footer>
@@ -142,22 +260,18 @@
                 playButton.textContent = 'Pause';
             } else {
                 audio.pause();
-                playButton.textContent = 'Play';
+                playButton.textContent = 'Lecture';
             }
         });
     </script>
     <script>
-        // Sélectionnez le bouton "Découvrez nos activités"
         const ctaButton = document.querySelector('.cta-button');
     
-        // Ajoutez un écouteur d'événements pour le clic
         ctaButton.addEventListener('click', (event) => {
-            event.preventDefault(); // Empêche le comportement par défaut du lien
+            event.preventDefault();
     
-            // Sélectionnez la section des activités
             const activitiesSection = document.getElementById('activities');
     
-            // Faites défiler la page jusqu'à la section des activités avec un effet fluide
             activitiesSection.scrollIntoView({ behavior: 'smooth' });
         });
     </script>

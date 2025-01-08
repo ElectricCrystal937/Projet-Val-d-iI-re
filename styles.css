@@ -28,6 +28,195 @@ h3 {
     font-weight: 600;
 }
 
+/* Ajouter les styles pour la barre de navigation */
+.nav-bar {
+    background-color: #fff; /* Fond blanc */
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd; /* Bordure en bas */
+}
+
+.chiffres-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.chiffre {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4
+    px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1 1 200px; /* Responsive sizing */
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #343a40;
+    color: white;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-in;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.nav-bar ul {
+    list-style: none; /* Supprimer les puces */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Centrer les éléments */
+}
+
+.nav-bar li {
+    margin-right: 20px; /* Espacement entre les éléments */
+}
+
+.nav-bar a {
+    color: #cb0f12; /* Couleur rouge */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-bar a:hover {
+    color: #6e0608; /* Changement de couleur au survol */
+}
+
+table a {
+    color: #cb0f12;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+table a:hover {
+    color: #6e0608;
+    text-decoration: underline;
+}
+
+/* Styliser le bouton de remontée */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #cb0f12;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#back-to-top:hover {
+    background-color: #6e0608;
+}
+
+#back-to-top i {
+    font-size: 24px;
+}
+
+/* Styles pour les sections */
+section {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+}
+
+section p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Styles pour les conteneurs de contenu */
+.ski-snowboard-content, .hiking-description, .vtt-description, .national-park-description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.ski-snowboard-content img, .hiking-description img, .vtt-description img, .national-park-description img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ski-snowboard-description, .hiking-description, .vtt-description, .national-park-description {
+    max-width: 50%;
+    text-align: left;
+    font-size: 1.1rem;
+    color: #555;
+}
+
 /* Section Hero */
 .hero {
     position: relative;
@@ -50,13 +239,36 @@ h3 {
     z-index: -1; /* Place la vidéo en arrière-plan */
 }
 
-.hero-content {
-    z-index: 1; /* Place le contenu au-dessus de la vidéo */
-}
-
 .hero-content p {
     font-size: 1.5rem;
     margin-top: 1rem;
+}
+
+#ski-snowboard {
+    padding: 2rem;
+    text-align: center;
+}
+
+.ski-snowboard-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.ski-snowboard-image {
+    max-width: 100%; /* Largeur maximale de l'image */
+    height: auto; /* Hauteur automatique */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ski-snowboard-description {
+    max-width: 50%;
+    text-align: left;
+    font-size: 1.1rem;
+    color: #555;
 }
 
 /* Bouton Call-to-Action */
@@ -72,7 +284,7 @@ h3 {
 }
 
 .cta-button:hover {
-    background-color: #cb0f12; /* Changement de couleur au survol */
+    background-color: #6e0608; /* Changement de couleur au survol */
 }
 
 /* Section Activités */
@@ -276,7 +488,101 @@ hr {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
-    transform: scale(1.2); /* Zoom de 20% */
-    transform-origin: center center; /* Centre le zoom */
+    z-index: 0; /* Assurez-vous que la vidéo est au-dessus des autres éléments */
+    transform: scale(1.2);
+    transform-origin: center center;
+}
+
+.hero-content {
+    z-index: 1; /* Assurez-vous que le contenu est au-dessus de la vidéo */
+    transition: opacity 0.5s ease; /* Ajoutez une transition pour un effet plus fluide */
+}
+
+
+/* Animations de navigation */
+
+.zoom {
+    transition: transform 0.3s ease;
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+
+.move {
+    transition: transform 0.3s ease;
+}
+
+.move:hover {
+    transform: translateX(10px);
+}
+
+/* Animations de transition */
+
+.transition {
+    transition: all 0.3s ease;
+}
+
+.transition:hover {
+    background-color: #cb0f12;
+    color: white;
+    transform: rotate(10deg);
+}
+
+/* Animations de scrolling */
+
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.move-scroll {
+    transition: transform 0.3s ease;
+}
+
+.move-scroll:hover {
+    transform: translateY(10px);
+}
+
+/* Animations de boutons */
+
+.button-zoom {
+    transition: transform 0.3s ease;
+}
+
+.button-zoom:hover {
+    transform: scale(1.1);
+}
+
+.button-move {
+    transition: transform 0.3s ease;
+}
+
+.button-move:hover {
+    transform: translateX(10px);
+}
+
+/* Animations de texte */
+
+.typography {
+    opacity: 0;
+    animation: typography 2s ease-in forwards;
+}
+
+@keyframes typography {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.text-move {
+    transition: transform 0.3s ease;
+}
+
+.text-move:hover {
+    transform: translateX(10px);
 }
