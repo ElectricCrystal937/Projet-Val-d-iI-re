@@ -53,6 +53,17 @@ h3 {
     flex: 1 1 200px; /* Responsive sizing */
 }
 
+.nav-bar a {
+    color: #cb0f12; /* Couleur rouge */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-bar a:hover {
+    color: #6e0608; /* Changement de couleur au survol */
+}
+
 h2 {
     text-align: center;
     margin-top: 40px;

@@ -17,22 +17,23 @@ document.getElementById('back-to-top').addEventListener('click', function() {
 </script>
 <nav class="nav-bar">
     <ul>
-        <li><a href="#activities">Activités</a></li>
-        <li><a href="#gallery">Galerie</a></li>
-        <li><a href="sources.html">Mes Sources</a></li>
+        <li><a href="index.html">Accueil</a></li>
         <li><a href="chiffrecle.html">Chiffre clés</a></li>
+        <li><a href="sources.html">Mes Sources</a></li>
+        <li><a href="https://www.google.com/maps/place/Val+d%27Is%C3%A8re/@45.449167,6.977778,12z/data=!4m5!3m4!1s0x478a6f6f6f6f6f6f:0x6a5a6a6a6a6a6a6a!8m2!3d45.449167!4d6.977778" target="_blank">Se rendre à Val d'Isère</a></li>
     </ul>
 </nav>
 <body>
     <header class="hero fade-in">
         <div class="hero-background">
             <iframe 
-                src="https://www.youtube.com/embed/6LuSOGzqWA0?autoplay=1&mute=1&loop=1&playlist=6LuSOGzqWA0" 
-                frameborder="0" 
-                allow="autoplay; encrypted-media" 
-                allowfullscreen
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-            </iframe>
+    src="https://www.youtube.com/embed/6LuSOGzqWA0?autoplay=1&mute=1&loop=1&playlist=6LuSOGzqWA0" 
+    frameborder="0" 
+    allow="autoplay; encrypted-media" 
+    allowfullscreen
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; pointer-events: none;"
+>
+</iframe>
             <script>
                 const video = document.getElementById('background-video');
                 const heroContent = document.querySelector('.hero-content');
@@ -86,12 +87,20 @@ document.getElementById('back-to-top').addEventListener('click', function() {
                     <td class="text-move">Faites le plein de sensations fortes : défiez la gravité dans les snowparks et vivez l’expérience ultime de freestyle en montagne !</td>
                 </tr>
                 <tr>
-                    <td><a href="#ski-schools" class="transition">Ecoles de skis</a></td>
+                    <td><a href="#ski-schools" class="transition">Écoles de ski</a></td>
                     <td class="move">Apprenez à dompter les pistes : rejoignez une école de ski et découvrez le plaisir de la glisse avec des moniteurs passionnés et expérimentés !</td>
                 </tr>
                 <tr>
                     <td><a href="#village" class="transition">Village</a></td>
                     <td class="move">Val d’Isère, village alpin d’exception, allie charme authentique, domaine skiable de renom et activités toute l’année.</td>
+                </tr>
+                <tr>
+                    <td><a href="#maisondeval" class="transition">Maison de Val</a></td>
+                    <td class="move">Val d’Isère, village alpin d’exception, allie charme authentique, domaine skiable de renom et activités toute l’année.</td>
+                </tr>
+                <tr>
+                    <td><a href="#transports" class="transition">Les transports</a></td>
+                    <td class="move">Accédez facilement à Val d'Isère grâce à des infrastructures de transport optimales.</td>
                 </tr>
             </tbody>
         </table>
@@ -171,7 +180,7 @@ document.getElementById('back-to-top').addEventListener('click', function() {
     <hr>
     <br>
     <section id="ski-schools" class="parallax">
-        <h2 class="typography">Ecoles de skis</h2>
+        <h2 class="typography">Écoles de ski</h2>
         <div class="ski-snowboard-content">
             <img src="https://evolution2.com/media/cache/og_filter/2021/08/1977-kids-ski-val-d-isere-min.jpg" alt="Parc national à Val d'Isère" class="fade-in">
             <div class="national-park-description">
@@ -193,6 +202,32 @@ document.getElementById('back-to-top').addEventListener('click', function() {
     <br>
     <hr>
     <br>
+    <section id="maisondeval" class="parallax">
+        <h2 class="typography">Maison de Val</h2>
+        <div class="ski-snowboard-content">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipPGRLa8Hw2w05yDLvGWgnLLuOVvSXf263gQb7xM=s680-w680-h510-rw" alt="Parc national à Val d'Isère" class="fade-in">
+            <div class="national-park-description">
+                <p class="text-move">
+                    Plongez dans l’histoire et l’âme de Val d’Isère à La Maison de Val. Ce lieu unique vous invite à découvrir la richesse du patrimoine montagnard à travers son musée captivant, des expositions fascinantes et des récits passionnants. Explorez l’évolution de la station, de son village d’autrefois à la destination de renommée mondiale qu’elle est aujourd’hui.
+
+                    La Maison de Val, c’est aussi un véritable centre de vie et de culture. Retrouvez les associations locales comme Vie Val d’Is, une école de musique qui fait vibrer la station, ainsi que le cinéma Le Splendide pour une pause artistique et divertissante. Que vous soyez en quête de culture, de découverte ou simplement curieux d’en savoir plus sur la vie en montagne, La Maison de Val est une expérience incontournable qui enrichira votre séjour. Venez vivre un moment d’émerveillement et de partage à Val d’Isère !   
+                </p>
+        </section>
+    <br>
+    <hr>
+    <br>
+    <section id="transports" class="parallax">
+        <h2 class="typography">Les transports</h2>
+        <div class="ski-snowboard-content">
+            <img src="https://www.tourmag.com/photo/art/grande/69489739-48589108.jpg?v=1670592528" alt="Parc national à Val d'Isère" class="fade-in">
+            <div class="national-park-description">
+                <p class="text-move">
+                    Rejoindre Val d’Isère est simple grâce à sa proximité avec les aéroports de Chambéry, Lyon, Grenoble et Genève. Accessible via les autoroutes A43 et A430, la station est également desservie par la gare de Bourg-Saint-Maurice, située à seulement 30 km, avec des navettes régulières pour un trajet pratique et confortable.  
+                </p>
+        </section>
+        <br>
+        <hr>
+        <br>
     <section id="gallery">
         <h2 class="typography">Galerie Photos</h2>
         <br>
@@ -205,8 +240,7 @@ document.getElementById('back-to-top').addEventListener('click', function() {
                     <img src="https://www.espaces.ca/var/upload/redactor/1670549046Val%20d%20Isere%20ski%20Mont%20Blanc.jpg" alt="Image 2">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://static.apidae-tourisme.com/filestore/objets-touristiques/images/89/251/13957977-diaporama.jpg" alt="Image  ```html
-                    3">
+                    <img src="https://static.apidae-tourisme.com/filestore/objets-touristiques/images/89/251/13957977-diaporama.jpg" alt="Image 3">
                 </div>
             </div>
             <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
